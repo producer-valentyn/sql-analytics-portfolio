@@ -49,4 +49,12 @@ Data Analytics Mate training dataset.
 
 ---
 
+## User Session Analysis
+Analysis of website sessions by country and device type.
+
+## Conversion Funnel Analysis
+Email marketing funnel analysis including send, open and visit stages.
+
+---
+
 More SQL projects will be added to this repository.
