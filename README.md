@@ -58,5 +58,39 @@ Analysis of website sessions by country and device type.
 Email marketing funnel analysis including send, open and visit stages.
 
 ---
+## Online Store Sales Analysis (Python)
+
+### Goal
+Analyze online store sales data to identify key revenue drivers, regional performance, and customer purchasing patterns.
+
+### Dataset
+Three datasets were used:
+- events — order and sales information
+- products — product categories
+- countries — country and region mapping
+
+### Key Metrics
+- revenue
+- cost
+- profit
+- shipping_days
+- profit_margin
+
+### Analysis Performed
+- Revenue by product category
+- Revenue by region
+- Revenue by sales channel
+- Top 10 countries by revenue
+- Shipping time analysis
+- Profit vs shipping time relationship
+- Revenue trends over time
+- Revenue by day of week
+
+### Tools
+- Python
+- Pandas
+- Matplotlib
+
+---
 
 More SQL projects will be added to this repository.
