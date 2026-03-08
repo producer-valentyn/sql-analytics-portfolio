@@ -4,13 +4,15 @@ This repository contains SQL projects demonstrating analytical skills using comp
 
 ## Tools and Concepts
 
-* SQL
-* BigQuery
-* CTE (Common Table Expressions)
-* Window Functions
-* Aggregations
-* Joins
-* Data Transformation
+- SQL
+- BigQuery
+- Python (Pandas, Matplotlib)
+- CTE (Common Table Expressions)
+- Window Functions
+- Aggregations
+- Joins
+- Data Transformation
+- Exploratory Data Analysis
 
 ---
 
