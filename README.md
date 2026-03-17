@@ -139,7 +139,7 @@ Data was extracted from Google BigQuery and includes information about:
 
 ## Interactive Dashboard
 
-Tableau Dashboard:  
+Interactive Tableau Dashboard:
 https://public.tableau.com/app/profile/valentyn.fedyk/viz/OnlineStoreSalesDashboard_17730847310630/OnlineStoreSalesDashboard
 ---
 
