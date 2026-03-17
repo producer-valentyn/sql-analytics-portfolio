@@ -93,4 +93,54 @@ Three datasets were used:
 
 ---
 
+# Online Store Analytics Project (Python)
+
+## Goal
+Analyze online store user behavior and sales performance to identify key drivers of revenue, traffic efficiency, and customer purchasing patterns.
+
+## Dataset
+Data was extracted from Google BigQuery and includes information about:
+
+- sessions
+- users
+- traffic sources
+- orders
+- device type
+- geographic regions
+
+## Analysis Performed
+
+- Sales trends over time
+- Correlation between sessions and orders
+- A/B test: registered vs non-registered users
+- Conversion rate by device
+- Conversion rate by traffic channel
+- Sessions distribution by continent
+- Orders by device and traffic source
+
+## Key Insights
+
+- The Americas region generates the highest share of traffic and purchases.
+- Desktop users generate the majority of orders and have the highest conversion rate.
+- Search channels (Organic and Paid Search) generate a large share of orders.
+- Social traffic shows the highest conversion rate among channels.
+- There is a very strong correlation between sessions and orders (≈0.99).
+- The A/B test shows no statistically significant difference between registered and non-registered users.
+
+## Tools Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Google BigQuery
+- Tableau
+
+## Interactive Dashboard
+
+Tableau Dashboard:  
+https://public.tableau.com/app/profile/valentyn.fedyk/viz/OnlineStoreSalesDashboard_17730847310630/OnlineStoreSalesDashboard
+---
+
 More SQL projects will be added to this repository.
