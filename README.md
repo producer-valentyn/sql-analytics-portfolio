@@ -1,145 +1,95 @@
-# SQL Analytics Portfolio
+# Online Store Analytics Automation
 
-This repository contains SQL and Python projects demonstrating analytical skills using real-world business scenarios.
+## Project Overview
 
----
+This project automates the analysis of online store event data using Python. It processes a CSV dataset, checks data quality, generates analytical reports, and creates visualizations.
 
-## 🛠 Tools and Concepts
+The project was originally developed as part of my Data Analytics studies, using data extracted from Google BigQuery. The current version runs locally on a CSV dataset.
 
-- SQL
-- BigQuery
-- Python (Pandas, Matplotlib, NumPy, Seaborn)
-- CTE (Common Table Expressions)
-- Window Functions
-- Aggregations
-- Joins
-- Data Transformation
-- Exploratory Data Analysis
+## Tools & Technologies
 
----
-
-## 📊 Projects
-
-### 📧 Email Campaign Country Analysis (SQL)
-
-**Goal:**  
-Analyze email campaign performance by country and account attributes.
-
-**Business Questions:**
-- Which countries generate the most accounts?
-- Which countries receive the most emails?
-- How do engagement metrics differ across countries?
-
-**Metrics:**
-- `account_cnt` — number of accounts  
-- `sent_msg` — sent emails  
-- `open_msg` — opened emails  
-- `visit_msg` — visits after email  
-
-**Techniques Used:**
-- CTEs for query structure  
-- Window functions for totals  
-- `DENSE_RANK()` for ranking  
-- `UNION ALL` to combine metrics  
-- Aggregations with `GROUP BY`  
-
----
-
-### 👤 User Session Analysis (SQL)
-
-Analysis of website sessions by:
-- country
-- device type
-
----
-
-### 🔄 Conversion Funnel Analysis (SQL)
-
-Email marketing funnel analysis including:
-- send → open → visit stages
-
----
-
-### 🛒 Online Store Sales Analysis (Python)
-
-**Goal:**  
-Analyze sales data to identify key revenue drivers and regional performance.
-
-**Dataset:**
-- `events` — orders and sales  
-- `products` — product categories  
-- `countries` — country mapping  
-
-**Key Metrics:**
-- revenue  
-- cost  
-- profit  
-- shipping_days  
-- profit_margin  
-
-**Analysis:**
-- Revenue by category  
-- Revenue by region  
-- Revenue by channel  
-- Top 10 countries  
-- Shipping time analysis  
-- Profit vs shipping time  
-- Revenue trends  
-
-**Tools:**
 - Python
 - Pandas
 - Matplotlib
+- CSV data processing
+- Data quality checks
+- Automated reporting and visualization
 
----
+## Dataset
 
-### 📈 Online Store Analytics Project (Python)
+The dataset contains 800,996 rows and 9 columns, covering the period from November 1, 2020, to January 27, 2021.
 
-**Goal:**  
-Analyze user behavior and sales performance.
+It includes information about:
+- Dates and countries
+- Devices and continents
+- Traffic channels
+- Events and event values
+- Test groups
 
-**Dataset includes:**
-- sessions  
-- users  
-- traffic sources  
-- orders  
-- device  
-- regions  
+## Automated Workflow
 
-**Analysis:**
-- Sales trends  
-- Sessions vs orders correlation  
-- A/B test (registered vs non-registered users)  
-- Conversion rate by device  
-- Conversion by traffic channel  
-- Sessions by continent  
+The `run_analysis.py` script performs the following steps:
 
-**Key Insights:**
-- Americas generate the most traffic and purchases  
-- Desktop users have the highest conversion  
-- Search channels drive most orders  
-- Social traffic has high conversion rate  
-- Strong correlation between sessions and orders (~0.99)  
-- No significant difference in A/B test  
+1. Loads the input CSV dataset.
+2. Checks the data structure and quality.
+3. Identifies duplicate rows and invalid or missing values.
+4. Generates summary reports grouped by different dimensions.
+5. Creates charts showing event activity over time, by device, and by traffic channel.
+6. Saves the generated CSV reports and charts to the `output/` directory.
 
-**Tools:**
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- BigQuery
-- Tableau  
+## Project Structure
 
----
+```text
+Online_Store_Analytics/
+├── online_store_dataset.csv
+├── run_analysis.py
+├── README.md
+└── output/
+    ├── data_overview.csv
+    ├── data_quality_report.csv
+    ├── daily_events.csv
+    ├── events_by_country.csv
+    ├── events_by_continent.csv
+    ├── events_by_device.csv
+    ├── events_by_channel.csv
+    ├── events_by_test.csv
+    ├── events_by_test_group.csv
+    ├── events_summary.csv
+    ├── test_groups_summary.csv
+    └── charts/
+```
 
-## 📊 Dashboards
+## How to Run
 
-- Tableau Dashboard:  
-https://public.tableau.com/app/profile/valentyn.fedyk/viz/OnlineStoreSalesDashboard_17730847310630/OnlineStoreSalesDashboard
+### 1. Install dependencies
 
----
+```bash
+pip install pandas matplotlib
+```
 
-## 📌 Notes
+### 2. Prepare the dataset
 
-More projects will be added over time.
+Place `online_store_dataset.csv` in the same directory as `run_analysis.py`.
+
+### 3. Run the script
+
+```bash
+python run_analysis.py
+```
+
+The script creates the `output/` directory and saves the reports and charts automatically.
+
+## Key Skills Demonstrated
+
+- Automating a repeatable data analysis workflow
+- Data validation and quality checks
+- Data aggregation using Pandas
+- Generating CSV reports
+- Creating data visualizations
+- Organizing a Python analytics project
+
+## Limitations
+
+The current version processes a local CSV file. It does not connect directly to BigQuery or automatically retrieve updated data.
+
+The results depend on the structure and contents of the provided dataset.
